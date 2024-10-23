@@ -9,7 +9,7 @@ import Accordion, {
   AccordionItem
 } from '../components/Accordion'
 import React from 'react'
-test('is rendered', () => {
+describe('Accordion', () => {
   render(
     <Accordion anim={true}>
       <AccordionItem>
@@ -20,6 +20,8 @@ test('is rendered', () => {
       </AccordionItem>
     </Accordion>
   )
-  expect(document.getElementsByClassName('acccordtion-body')).toBeDefined()
-  expect(screen.getByText('tego typu')).toBeDefined()
+  it('should be render', () => {
+    expect(document.getElementsByClassName('acccordtion-body')).toBeDefined()
+    expect(screen.getByText('tego typu')).toBeDefined()
+  })
 })
